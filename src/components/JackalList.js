@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
-import Jackal from './Jackal'
+import { Link, Router, IndexRoute, Route, browserHistory } from 'react-router';
 import '../App.css'
+import axios from 'axios'
 
 class JackalList extends Component {
+
   renderJackals() {
     return this.props.jackals.map((jackal, index) => {
       return(
         <div key={index}>
-          <h1>{jackal.name}</h1>
+          <Link
+          to={`jackals/${jackal.id}`}
+          >
+            <h1>{jackal.name}</h1>
+          </Link>
         </div>
       )
     })
