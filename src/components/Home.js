@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import JackalList from './JackalList'
 
-class AddJackal extends Component {
+class Home extends Component {
   constructor() {
     super()
     this.state = {
@@ -20,7 +21,8 @@ class AddJackal extends Component {
     this.setState({reason: inputValue})
   }
 
-  addJackal() {
+  addJackal(e) {
+    e.preventDefault()
     const jackal = {
       name: this.state.name,
       reason: this.state.reason,
@@ -34,6 +36,10 @@ class AddJackal extends Component {
     const { name, reason } = this.state
     return (
       <div className="add-jackal-container">
+        <form
+        className="add-jackal-form"
+        onSubmit={(e) => this.addJackal(e)}
+        >
           <input
           className="jackal-name"
           placeholder="name"
@@ -47,11 +53,11 @@ class AddJackal extends Component {
           <input
           type="submit"
           value="Submit"
-          onClick={() => this.addJackal()}
           />
+        </form>
       </div>
     );
   }
 }
 
-export default AddJackal;
+export default Home;
