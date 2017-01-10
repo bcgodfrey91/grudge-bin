@@ -27,7 +27,7 @@ class Home extends Component {
   }
 
   fetchJackals() {
-    axios.get('/jackals', {})
+    axios.get('/jackals')
     .then((response) => {
       this.setState({ jackals: response.data.jackals });
     });
@@ -43,9 +43,6 @@ class Home extends Component {
     })
   }
 
-  forgiveJackal() {
-    /// patch request
-  }
 
   render() {
     const { name, response, jackals } = this.state
