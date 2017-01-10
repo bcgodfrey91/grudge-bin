@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import JackalList from './JackalList'
+import axios from 'axios'
 
 class Home extends Component {
   constructor() {
@@ -7,28 +8,40 @@ class Home extends Component {
     this.state = {
       name: '',
       reason: '',
-      jackals: []
-    }
+      jackals: null
+    };
+  };
+
+  componentWillMount() {
+    this.fetchJackals();
   }
 
   updateName(e) {
     const inputValue = e.target.value
-    this.setState({name: inputValue})
+    this.setState({name: inputValue});
   }
 
   updateReason(e) {
     const inputValue = e.target.value
-    this.setState({reason: inputValue})
+    this.setState({reason: inputValue});
   }
 
-  addJackal(e) {
+  fetchJackals() {
+    axios.get('/jackals', {})
+    .then((response) => {
+      this.setState({ jackals: response.data.jackals });
+    });
+  }
+
+  addJackal(e, name, reason) {
     e.preventDefault()
-    const jackal = {
-      name: this.state.name,
-      reason: this.state.reason,
-      forgiven: false
-    }
-    this.setState({jackals: this.state.jackals.concat(jackal) })
+    axios.post('/jackals', { name: name, reason: reason })
+    .then(() => {
+      console.log('Response received');
+    })
+    .catch(() => {
+      console.log('Invalid request');
+    })
   }
 
   forgiveJackal() {
@@ -36,13 +49,13 @@ class Home extends Component {
   }
 
   render() {
-    const { jackals } = this.state
+    const { name, response, jackals } = this.state
     return (
       <div className="home">
         <div className="add-jackal-container">
           <form
           className="add-jackal-form"
-          onSubmit={(e) => this.addJackal(e)}
+          onSubmit={(e) => this.addJackal(e, name, response)}
           >
             <input
             className="jackal-name"
