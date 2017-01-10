@@ -7,6 +7,7 @@ class JackalList extends Component {
     return (
       <div className="jackal-list-container">
         <h1>hello</h1>
+        <Jackal />
       </div>
     );
   }
