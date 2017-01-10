@@ -1,9 +1,11 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
+const jackals = require('./routes/jackals')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/jackals', jackals)
 app.set('port', process.env.PORT || 3001);
 app.locals.title = 'Grudge List'
 
