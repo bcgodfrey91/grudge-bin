@@ -3,9 +3,12 @@ import '../App.css'
 
 class Jackal extends Component {
   render() {
+    const { jackal } = this.props
     return (
       <div className="jackal-container">
-        <h1>yoooo</h1>
+        <h2 className="jackal-name">{jackal.name}</h2>
+        <p className="jackal-reason">{jackal.reason}</p>
+        <button>Forgive Jackal</button>
       </div>
     );
   }
