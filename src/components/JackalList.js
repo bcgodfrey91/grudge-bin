@@ -15,9 +15,10 @@ class JackalList extends Component {
 
 
   render() {
+    const { jackals } = this.props
     return (
       <div className="jackal-list-container">
-        {this.renderJackals()}
+        { jackals ? this.renderJackals() : null }
       </div>
     );
   }
