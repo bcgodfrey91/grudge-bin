@@ -7,8 +7,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.locals.jackals = [
-  {title: 'Pete', reason: 'Scumbag', forgiven: 'false'},
-  {title: 'Qiese', reason: 'Also a scumbag', forgiven: 'false'}
+  {name: 'Pete', reason: 'Scumbag', forgiven: 'false'},
+  {name: 'Qiese', reason: 'Also a scumbag', forgiven: 'false'}
 ]
 
 router.get('/', (request, response) => {

@@ -12,7 +12,7 @@ class Home extends Component {
     };
   };
 
-  componentWillMount() {
+  componentDidMount() {
     this.fetchJackals();
   }
 
@@ -33,8 +33,7 @@ class Home extends Component {
     });
   }
 
-  addJackal(e, name, reason) {
-    e.preventDefault()
+  addJackal(name, reason) {
     axios.post('/jackals', { name: name, reason: reason })
     .then(() => {
       console.log('Response received');
@@ -55,7 +54,7 @@ class Home extends Component {
         <div className="add-jackal-container">
           <form
           className="add-jackal-form"
-          onSubmit={(e) => this.addJackal(e, name, response)}
+          onSubmit={(e) => this.addJackal(name, response)}
           >
             <input
             className="jackal-name"
