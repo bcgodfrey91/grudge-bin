@@ -28,8 +28,11 @@ class Home extends Component {
       reason: this.state.reason,
       forgiven: false
     }
-
     this.setState({jackals: this.state.jackals.concat(jackal) })
+  }
+
+  forgiveJackal() {
+    /// patch request
   }
 
   render() {

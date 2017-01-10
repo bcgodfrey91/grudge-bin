@@ -7,9 +7,7 @@ class JackalList extends Component {
     return this.props.jackals.map((jackal, index) => {
       return(
         <div key={index}>
-          <Jackal
-            jackal={jackal}
-          />
+          <h1>{jackal.name}</h1>
         </div>
       )
     })

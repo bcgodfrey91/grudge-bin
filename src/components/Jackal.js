@@ -8,7 +8,8 @@ class Jackal extends Component {
       <div className="jackal-container">
         <h2 className="jackal-name">{jackal.name}</h2>
         <p className="jackal-reason">{jackal.reason}</p>
-        <button>Forgive Jackal</button>
+        <button
+        >Forgive Jackal</button>
       </div>
     );
   }
