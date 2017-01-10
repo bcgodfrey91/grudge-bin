@@ -33,28 +33,35 @@ class Home extends Component {
   }
 
   render() {
-    const { name, reason } = this.state
+    const { jackals } = this.state
     return (
-      <div className="add-jackal-container">
-        <form
-        className="add-jackal-form"
-        onSubmit={(e) => this.addJackal(e)}
-        >
-          <input
-          className="jackal-name"
-          placeholder="name"
-          onChange={(e) => this.updateName(e)}
+      <div className="home">
+        <div className="add-jackal-container">
+          <form
+          className="add-jackal-form"
+          onSubmit={(e) => this.addJackal(e)}
+          >
+            <input
+            className="jackal-name"
+            placeholder="name"
+            onChange={(e) => this.updateName(e)}
+            />
+            <input
+            className="reasoning"
+            placeholder="reason"
+            onChange={(e) => this.updateReason(e)}
+            />
+            <input
+            type="submit"
+            value="Submit"
+            />
+          </form>
+        </div>
+        <div className="list-of-jackals">
+          <JackalList
+            jackals={jackals}
           />
-          <input
-          className="reasoning"
-          placeholder="reason"
-          onChange={(e) => this.updateReason(e)}
-          />
-          <input
-          type="submit"
-          value="Submit"
-          />
-        </form>
+        </div>
       </div>
     );
   }
