@@ -13,7 +13,10 @@ router.get('/', (request, response) => {
 })
 
 router.get('/:id', (request, response) => {
-  response.redirect()
+  const { id } = request.params
+  const jackal = app.locals.jackals.find(j => j.id == id)
+  if (jackal) { return response.send({ jackal }); }
+  else { return response.sendStatus(404); }
 })
 
 router.post('/', (request, response) => {
