@@ -46,13 +46,13 @@ class Home extends Component {
 
 
   render() {
-    const { name, response, jackals } = this.state
+    const { name, reason, jackals } = this.state
     return (
       <div className="home">
         <div className="add-jackal-container">
           <form
           className="add-jackal-form"
-          onSubmit={(e) => this.addJackal(name, response)}
+          onSubmit={(e) => this.addJackal(name, reason)}
           >
             <input
             className="jackal-name"

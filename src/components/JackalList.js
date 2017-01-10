@@ -10,7 +10,7 @@ class JackalList extends Component {
       return(
         <div key={index}>
           <Link
-          to={`jackals/${jackal.id}`}
+            to={`jackals/${jackal.id}`}
           >
             <h1>{jackal.name}</h1>
           </Link>
