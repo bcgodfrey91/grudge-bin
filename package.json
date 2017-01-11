@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "concurrently": "^3.1.0",
     "nodemon": "^1.11.0",
     "react-scripts": "0.8.5"
   },
@@ -15,10 +14,11 @@
     "react-dom": "^15.4.2"
   },
   "scripts": {
-    "start": "concurrently \"nodemon server.js\" \"react-scripts start\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://obscure-waters-17699.herokuapp.com/api"
+
+  "proxy": "http://localhost:3001"
 }
