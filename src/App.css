@@ -2,9 +2,17 @@
   text-align: center;
 }
 
+body {
+  background-color: #ffdfb0;
+}
+
+button {
+  cursor: pointer;
+}
+
 .add-jackal-container {
   background-color: #222;
-  color: white;
+  color: #f9f9f9;
   display: flex;
   justify-content: center;
   height: 200px;
@@ -30,7 +38,62 @@
 
 .submit-button {
   align-self: center;
-  border: none;
+  background: #ffdfb0;
+  border-top: 5px solid #ffc064;
+  border-right: 5px solid #ffa868;
+  border-bottom: 5px solid #ffc064;
+  border-left: 5px solid #ffa868;
+  color: #222;
+  cursor: pointer;
+  font-size: 30px;
   height: 50px;
   width: 200px;
+}
+
+.submit-button:hover {
+  align-self: center;
+  background: #ffa868;
+  border-top: 5px solid #ffdfb0;
+  border-right: 5px solid #ffc064;
+  border-bottom: 5px solid #ffdfb0;
+  border-left: 5px solid #ffc064;
+  color: #222;
+  cursor: pointer;
+  font-size: 30px;
+  height: 50px;
+  width: 200px;
+}
+
+.jackal-container button {
+  background-color: #222;
+  border: none;
+  border-radius: 10px;
+  color: #ffdfb0;
+  font-size: 20px;
+  vertical-align: center;
+  height: 50px;
+  width: 175px;
+}
+.jackal-container button:hover {
+  background-color: #222;
+  border: none;
+  border-radius: 10px;
+  color: #cc0000;
+  font-size: 20px;
+  height: 50px;
+  width: 175px;
+}
+
+.jackal-container h1 {
+  font-size: 50px;
+}
+
+.link-to-jackal {
+  text-decoration: none;
+  color: #222;
+}
+
+.link-to-jackal:hover {
+  text-decoration: none;
+  color: #cc0000;
 }

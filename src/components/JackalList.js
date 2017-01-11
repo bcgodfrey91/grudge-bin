@@ -11,6 +11,7 @@ class JackalList extends Component {
         <div key={index}>
           <Link
             to={`jackals/${jackal.id}`}
+            className="link-to-jackal"
           >
             <h1>{jackal.name}</h1>
           </Link>

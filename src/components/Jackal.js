@@ -29,8 +29,8 @@ class Jackal extends Component {
     const { jackal } = this.state
     return (
       <div className="jackal-container">
-        <h2 className="jackal-name">{jackal.name}</h2>
-        <p className="jackal-reason">{jackal.reason}</p>
+        <h1>Damn...remember that scumbag {jackal.name}?</h1>
+        <h2 className="jackal-reason">{jackal.reason}</h2>
         <button
         >Forgive Jackal</button>
       </div>
