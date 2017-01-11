@@ -6,7 +6,7 @@ class Jackal extends Component {
   constructor() {
     super()
     this.state = {
-      jackal: []
+      jackal: ''
     };
   };
 
@@ -14,7 +14,7 @@ class Jackal extends Component {
     this.getThisJackal()
   }
 
-  getThisJackal(id) {
+  getThisJackal() {
     axios.get(`/jackals/${this.props.routeParams.id}`)
     .then((response) => {
       this.setState({ jackal: response.data.jackal })

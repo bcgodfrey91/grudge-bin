@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link, Router, IndexRoute, Route, browserHistory } from 'react-router';
 import JackalList from './JackalList'
 import axios from 'axios'
+import '../App.css'
+
 
 class Home extends Component {
   constructor() {
@@ -49,27 +51,28 @@ class Home extends Component {
     const { name, reason, jackals } = this.state
     return (
       <div className="home">
-        <div className="add-jackal-container">
+        <header className="add-jackal-container">
           <form
           className="add-jackal-form"
           onSubmit={(e) => this.addJackal(name, reason)}
           >
             <input
             className="jackal-name"
-            placeholder="name"
+            placeholder="Name"
             onChange={(e) => this.updateName(e)}
             />
             <input
             className="reasoning"
-            placeholder="reason"
+            placeholder="Reason"
             onChange={(e) => this.updateReason(e)}
             />
             <input
+            className="submit-button"
             type="submit"
             value="Submit"
             />
           </form>
-        </div>
+        </header>
         <div className="list-of-jackals">
           <JackalList
             jackals={jackals}
