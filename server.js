@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/jackals', jackals)
 app.set('port', process.env.PORT || 3001);
-app.use(express.static(path.join(__dirname, '/public')))
+app.use(express.static(path.join(__dirname, '/jackals')))
 app.locals.title = 'Grudge List'
 
 app.listen(app.get('port'), () => {
