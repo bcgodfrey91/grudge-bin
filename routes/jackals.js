@@ -6,13 +6,17 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.locals.jackals = [
-  {name: 'Pete', reason: 'Scumbag', forgiven: 'false'},
-  {name: 'Qiese', reason: 'Also a scumbag', forgiven: 'false'}
-]
+app.locals.jackals = []
 
 router.get('/', (request, response) => {
   response.send({ jackals: app.locals.jackals })
+})
+
+router.get('/:id', (request, response) => {
+  const { id } = request.params
+  const jackal = app.locals.jackals.find(j => j.id == id)
+  if (jackal) { return response.send({ jackal }); }
+  else { return response.sendStatus(404); }
 })
 
 router.post('/', (request, response) => {
