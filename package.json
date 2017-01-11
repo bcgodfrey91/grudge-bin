@@ -21,5 +21,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://bg-grudge-bin.herokuapp.com/"
+  "proxy": "https://bg-grudge-bin.herokuapp.com/api"
 }
