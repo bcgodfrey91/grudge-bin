@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.locals.jackals = [{name: 'Pete', reason: 'Scumbag', fogiven: false, id: Date.now()}]
+app.locals.jackals = []
 
 router.get('/', (request, response) => {
   response.send({ jackals: app.locals.jackals })
