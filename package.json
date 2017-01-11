@@ -16,10 +16,10 @@
     "react-scripts": "0.8.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently 'nodemon server.js' 'react-scripts start'",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://bg-grudge-bin-server.herokuapp.com"
+  "proxy": "http://localhost:3001"
 }
