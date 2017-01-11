@@ -10,7 +10,7 @@ class JackalList extends Component {
       return(
         <div key={index}>
           <Link
-            to={`jackals/${jackal.id}`}
+            to={`https://bg-grudge-bin-server.herokuapp.com/jackals/${jackal.id}`}
             className="link-to-jackal"
           >
             <h1>{jackal.name}</h1>
