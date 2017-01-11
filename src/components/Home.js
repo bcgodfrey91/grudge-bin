@@ -29,14 +29,14 @@ class Home extends Component {
   }
 
   fetchJackals() {
-    axios.get('/jackals')
+    axios.get('https://bg-grudge-bin.herokuapp.com/jackals')
     .then((response) => {
       this.setState({ jackals: response.data.jackals });
     });
   }
 
   addJackal(name, reason) {
-    axios.post('/jackals', { name: name, reason: reason })
+    axios.post('https://bg-grudge-bin.herokuapp.com/jackals', { name: name, reason: reason })
     .then(() => {
       console.log('Response received');
     })
