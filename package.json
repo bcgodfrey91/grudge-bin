@@ -20,5 +20,5 @@
     "eject": "react-scripts eject"
   },
 
-  "proxy": "http://localhost:3001"
+  "proxy": "http://stormy-castle-52608.herokuapp.com/"
 }
