@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link, Router, IndexRoute, Route, browserHistory } from 'react-router';
 import JackalList from './JackalList'
 import axios from 'axios'
 import '../App.css'
